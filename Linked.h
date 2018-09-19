@@ -19,13 +19,17 @@ public:
     void searchRg(int rg);
     void adjustPosition(Node* start, int amnt, long* m);
     void showList();
-    //void mergeSort(int begin, int end);
+    void mergeSort(int begin, int end);
+    void bubble();
     void exportTxt(char* name);
     void importTxt(char* name);
     void printInfo(char* name, int rg, long c, long m, 
          double time, char* action);
 private:
     //void merge(int begin, int pivot, int end);
+    Node* getIndex(int index);
+    void swap(Node* node1, Node* node2);
+    void split(Node* begin, Node* middle);
     Node *first;
     Node *last;
     int n_nodes;

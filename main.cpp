@@ -11,6 +11,7 @@ int main() {
     
     Linked lin;
     lin.importTxt("NomeRG10.txt");
+    //lin.mergeSort(0, 9);
     lin.showList();
 
     return 0;
