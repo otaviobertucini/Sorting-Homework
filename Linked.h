@@ -20,6 +20,7 @@ public:
     void adjustPosition(Node* start, int amnt, long* m);
     void showList();
     void mergeSort(int begin, int end);
+    void insertion();
     void bubble();
     void exportTxt(char* name);
     void importTxt(char* name);
