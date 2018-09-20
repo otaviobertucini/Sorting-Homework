@@ -260,66 +260,6 @@ Node* Linked::getIndex(int index) {
     return aux;
 }
 
-/*void Linked::mergeSort(Node* l){
-    if(first == NULL || first->getNext() == NULL)
-        return;
-    
-    Node* begin;
-    Node* middle;
-    split(l, &begin, &middle);
-    
-}*/
-
-void Linked::split(Node* begin, Node* middle) {
-
-}
-
-/*void Linked::merge(int begin, int pivot, int end){
-    int i, enter = 1, size_aux = 0;
-    int index1 = begin;
-    int index2 = pivot+1;
-    int size = (begin+end)+1;
-    Node *node1, *node2, *to_add;
-    Node* aux;
-    Node* beg;
-    Node* aux2;
-    for(i=0; i<size; i++){          
-        if((index1 <= pivot && index2 <= end) || enter){
-            enter = 0;
-            node1 = getIndex(index1);
-            node2 = getIndex(index2);
-            if(node1->getRg() < node2->getRg()){
-                to_add = node1;
-                index1++;
-            }
-            else{
-                to_add = node2;
-                index2++;
-            }
-            
-            if(size_aux == 0){
-                beg = to_add;
-                aux = beg;
-                size_aux++;
-            }
-            else{
-                aux->setNext(to_add);
-                aux = aux->getNext();
-                size_aux++;
-            }
-        }
-    }    
-    /*aux2 = first;
-    for(i=0; i<begin; i++){
-        aux2 = beg->getNext();
-    }
-    aux2->setNext(beg);
-}*/
-
-/*void bubble(){
-    
-}*/
-
 void Linked::insertion() {
     Node* node = first->getNext();
     Node* curr = node->getNext();

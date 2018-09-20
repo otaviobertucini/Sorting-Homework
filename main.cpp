@@ -10,7 +10,7 @@ using namespace std;
 int main() {
     Sequential seq;
     seq.importTxt("NomeRG10.txt");
-    seq.mergeSort(0, 9);
+    seq.insertion();
     seq.showList();
     
     Linked lin;
@@ -28,11 +28,11 @@ int main() {
     lin.insertEnd("otavio", 1000);
     lin.insertEnd("otavio", 1);*/
     //cout << "Antes" << endl;
-    lin.importTxt("NomeRG10.txt");
+    /*lin.importTxt("NomeRG10.txt");
     //lin.showList();
     lin.insertion();
     //cout << "Depois" << endl;
-    lin.showList();
+    lin.showList();*/
 
     return 0;
 }

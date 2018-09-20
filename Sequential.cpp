@@ -368,6 +368,22 @@ void Sequential::merge(int begin, int pivot, int end){
     }
 }
 
+void Sequential::insertion(){
+    int i, j;
+    Element n;
+    for(i=1; i<n_elements; i++){
+        n = start[i];
+        j = i-1;
+        while(j >= 0 && n.getRg() < start[j].getRg()){
+            start[j+1] = start[j];
+            start[j+1].setPos(j+2);
+            j--;
+        }
+        start[j+1] = n;
+        start[j+1].setPos(j+2);
+    }
+}
+
 void Sequential::showList(){
     int start_s=clock();
     

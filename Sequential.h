@@ -20,6 +20,7 @@ public:
     void searchRg(int rg);
     void showList();
     void showElement(Element element);
+    void insertion();
     void mergeSort(int begin, int end);
     void importTxt(char* file);
     void exportTxt(char* file);
