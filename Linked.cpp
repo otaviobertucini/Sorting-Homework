@@ -270,7 +270,7 @@ void Linked::insertion() {
             prev->setNext(node->getNext());
             if (node->getNext() != NULL)
                 node->getNext()->setPrev(prev);
-            while (prev != NULL) {
+            while (prev != NULL) {               
                 if (prev == first) {        
                     if(prev->getRg() > node->getRg()){
                         first = node;                    
@@ -297,6 +297,7 @@ void Linked::insertion() {
                 }
             }
         }
+        showList();
         node = curr;
         if (curr != NULL)
             curr = curr->getNext();
@@ -323,8 +324,56 @@ void Linked::swap(Node* node1, Node* node2) {
     if (node1 == first)
         first = node2;
     if (node2 == last)
-        last = node2;
+        last = node1;
 }
+
+void Linked::mergeSort(){
+    int n, h, i, sub;    
+    for(n=2; n < n_nodes; n*=2){
+        h = 0;
+        for(i=0; i < n_nodes/n-1; ){
+            merge(h, h+n-1);
+            h += n;
+            i++;
+        }
+        if(n_nodes - h == n)
+            merge(h, h+n-1);
+        else
+            merge(h, n_nodes-1);        
+    }
+}
+
+void Linked::merge(int begin, int end){
+    cout << "----------" << endl;
+    cout << "De " << begin << " até " << end << endl;
+    cout << "----------" << endl;
+}
+
+//void Linked::callMergeSort(){
+//    mergeSort(first, last);
+//}
+//
+//void Linked::mergeSort(Node* start, Node* end){   
+//    if(start == NULL || start->getNext() == NULL)
+//        return;     
+//    
+//    Node *a, *b, *aux=start;
+//    
+//    split(start, a, b);
+//    mergeSort(start, a);
+//    mergeSort(a->getNext(), b);    
+//}
+//
+//void Linked::split(Node* start, Node* a, Node* b){
+//    Node *slow = start, *fast = start->getNext();
+//    
+//    while(fast != NULL && fast->getNext() != NULL){
+//        slow = slow->getNext();
+//        fast = fast->getNext()->getNext();
+//    }    
+//    a = start;
+//    b = slow->getNext();
+//}
 
 void Linked::exportTxt(char* name) {
     Node* aux = first;

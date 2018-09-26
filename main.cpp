@@ -7,31 +7,32 @@ using std::cout;
 using std::endl;
 using namespace std;
 
-int main() {
-    Sequential seq;
-    seq.importTxt("NomeRG10.txt");
+int main() {    
+    /*Sequential seq;
+    seq.importTxt("NomeRG1M.txt");
     seq.insertion();
-    seq.showList();
+    seq.showList();*/
     
     Linked lin;
-    /*lin.insertEnd("otavio", 12);
-    //lin.insertEnd("otavio", 3);
-    //lin.insertEnd("otavio", 1);
-    //lin.insertEnd("otavio", 1);
-    //lin.insertEnd("otavio", 8);
-    //lin.insertEnd("otavio", 6);
-    //lin.insertEnd("otavio", 1);
-    lin.insertEnd("otavio", -1);
-    lin.insertEnd("otavio", 10);
-    lin.insertEnd("otavio", 15);
-    lin.insertEnd("otavio", 4);
-    lin.insertEnd("otavio", 1000);
+    lin.insertEnd("otavio", 12);
+    lin.insertEnd("otavio", 3);
+    lin.insertEnd("otavio", 1);
+    lin.insertEnd("otavio", 1);
+    lin.insertEnd("otavio", 8);
+    lin.insertEnd("otavio", 8);
+    lin.insertEnd("otavio", 6);
+    lin.insertEnd("otavio", 6);
+    /*lin.insertEnd("otavio", 1); 
+    lin.insertEnd("otavio", 1);
     lin.insertEnd("otavio", 1);*/
-    //cout << "Antes" << endl;
-    /*lin.importTxt("NomeRG10.txt");
+    lin.mergeSort();
     //lin.showList();
+    
+    //cout << "Antes" << endl;
+    
+    /*Linked lin;
+    lin.importTxt("NomeRG10.txt");
     lin.insertion();
-    //cout << "Depois" << endl;
     lin.showList();*/
 
     return 0;

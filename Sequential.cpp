@@ -1,6 +1,7 @@
 #include "Sequential.h"
 #include <cstddef>
 #include "Element.h"
+#include "Linked.h"
 #include <iostream>
 #include <fstream>
 #include <string>
